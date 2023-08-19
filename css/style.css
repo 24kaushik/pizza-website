@@ -13,6 +13,7 @@ nav {
     /* background: #3b2727; */
     height: 80px;
     width: 100%;
+    background: #fff;
     /* padding: 10px; */
     display: flex;
     justify-content: space-between;
@@ -115,6 +116,7 @@ a:hover {
     a.active,
     a:hover {
         background: none;
+        background-size:cover;
         color: #aa89d0;
     }
 }
@@ -135,6 +137,16 @@ a:hover {
 #page1 {
     height: calc(100vh - 80px);
     display: flex;
+}
+
+.page1-bg{
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 80vw;
+    background: url(/assets/doodle-pizza-seamless-pattern_650511-489.avif);
+    z-index: -1;
+    opacity: .15;
 }
 
 .page-1-left {
@@ -166,6 +178,7 @@ a:hover {
     height: 100%;
     display: flex;
     align-items: center;
+  
 }
 
 .page-1-pizza-big {
@@ -203,4 +216,121 @@ a:hover {
     background: orange;
     color: #000;
 
+}
+
+.page1-mushroom1 {
+    height: 70px;
+    position: absolute;
+    z-index: 2;
+    right: 12%;
+    top: 14%;
+    transform: rotate(32deg);
+}
+
+.page1-mushroom2 {
+    height: 70px;
+    position: absolute;
+    z-index: 2;
+    right: 7%;
+    top: 86%;
+    transform: rotate(287deg);
+}
+
+.page1-mushroom3 {
+    height: 70px;
+    position: absolute;
+    z-index: 2;
+    right: 43%;
+    top: 48%;
+    transform: rotate(287deg);
+}
+
+.page1-tomato1 {
+    height: 80px;
+    position: absolute;
+    z-index: 2;
+    right: 32%;
+    top: 87%;
+}
+
+.page1-tomato2 {
+    height: 79px;
+    position: absolute;
+    z-index: 2;
+    transform: rotate(244deg);
+    right: 27%;
+    top: 11%;
+}
+.page1-tomato3 {
+    height: 79px;
+    position: absolute;
+    z-index: 2;
+    transform: rotate(244deg);
+    right: 6%;
+    top: 61%;
+}
+
+.page1-pepper1 {
+    height: 157px;
+    position: absolute;
+    z-index: 2;
+    transform: rotate(35deg);
+    right: 3%;
+    top: 23%;
+}
+
+.page1-pepper2 {
+    height: 157px;
+    position: absolute;
+    z-index: 2;
+    transform: rotate(239deg);
+    right: 42%;
+    top: 64%;
+}
+
+.page1-pepperoni1 {
+    height: 87px;
+    position: absolute;
+    z-index: 2;
+    right: 36%;
+    top: 19%;
+}
+
+.page1-pepperoni2 {
+    height: 87px;
+    position: absolute;
+    z-index: 2;
+    right: 1%;
+    top: 11%;
+}
+.page1-pepperoni3 {
+    height: 87px;
+    position: absolute;
+    z-index: 2;
+    right: 45%;
+    top: 84%;
+}
+.page1-onionSlice1 {
+    height: 152px;
+    position: absolute;
+    z-index: 2;
+    transform: rotate(152deg);
+    right: 19%;
+    top: 78%;
+}
+.page1-mint1 {
+    height: 98px;
+    position: absolute;
+    z-index: 2;
+    transform: rotate(19deg);
+    right: 2%;
+    top: 46%;
+}
+.page1-mint2 {
+    height: 98px;
+    position: absolute;
+    z-index: 2;
+    transform: rotate(250deg);
+    right: 44%;
+    top: 29%;
 }
