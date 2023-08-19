@@ -1,16 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Outfit:wght@300;400;500&family=Overlock&display=swap');
 
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Outfit', sans-serif;
     box-sizing: border-box;
     text-decoration: none;
 }
 
+
 nav {
     /* background: #3b2727; */
-    /* height: 80px; */
+    height: 80px;
     width: 100%;
     /* padding: 10px; */
     display: flex;
@@ -19,7 +20,8 @@ nav {
 
 .nav-text {
     font-size: 35px;
-    font-weight: bold;
+
+
     color: black;
     line-height: 80px;
     display: flex;
@@ -30,7 +32,7 @@ nav {
 
 nav ul {
     float: right;
-    margin-right: 30px;
+    margin-right: 5em;
 }
 
 nav ul li {
@@ -38,14 +40,15 @@ nav ul li {
     padding: 0 15px;
     display: inline-block;
     list-style: none;
-    font-weight: bold;
+    font-weight: 400;
+    font-family: 'Outfit', sans-serif;
 
 }
 
 nav ul li a {
-    font-size: 25px;
+    font-size: 1.4em;
     color: black;
-   padding: auto;
+    padding: auto;
     transition: .5s;
 }
 
@@ -68,6 +71,10 @@ a:hover {
 
 #check {
     display: none;
+}
+
+.fa-bars {
+    padding-left: 30px;
 }
 
 @media (max-width:1040px) {
@@ -116,8 +123,84 @@ a:hover {
     left: 0;
 }
 
-.logo{
+.logo {
     display: inline-block;
     width: 100px;
-    
+
+}
+
+
+
+/* PAGE 1 CSS */
+#page1 {
+    height: calc(100vh - 80px);
+    display: flex;
+}
+
+.page-1-left {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 3em;
+}
+
+.page-1-left h1 {
+    font-weight: 500;
+}
+
+.page-1-left h4 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    margin-bottom: 1em;
+}
+
+.page-1-left h1 {
+    font-size: 7rem;
+    font-family: 'Overlock', cursive;
+}
+
+.page-1-right {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.page-1-pizza-big {
+    max-width: 650px;
+    margin-right: -100%;
+    z-index: 2;
+}
+
+.orange-left {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+}
+
+.orange-right {
+    background-color: orange;
+    width: 50%;
+    height: 100%;
+    right: 0;
+    z-index: 0;
+}
+
+.page1-buttons button {
+    padding: 7px 14px;
+    margin: 0 10px;
+    border: none;
+    transition: all 150ms;
+    cursor: pointer;
+    background: #000;
+    color: white;
+}
+
+.page1-buttons button:hover {
+    background: orange;
+    color: #000;
+
 }
