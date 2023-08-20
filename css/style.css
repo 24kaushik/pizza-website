@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Outfit:wght@300;400;500&family=Overlock&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Outfit:wght@300;400;500;600&family=Overlock&display=swap');
+
 
 * {
     margin: 0;
@@ -8,21 +9,23 @@
     text-decoration: none;
 }
 
+a {
+    color: unset;
+    text-decoration: none;
+}
+
 
 nav {
-    /* background: #3b2727; */
     height: 80px;
     width: 100%;
     background: #fff;
-    /* padding: 10px; */
     display: flex;
     justify-content: space-between;
+    z-index: 999;
 }
 
 .nav-text {
     font-size: 35px;
-
-
     color: black;
     line-height: 80px;
     display: flex;
@@ -42,7 +45,7 @@ nav ul li {
     display: inline-block;
     list-style: none;
     font-weight: 400;
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
 
 }
 
@@ -54,10 +57,9 @@ nav ul li a {
 }
 
 
-a:hover {
+nav ul li a:hover {
     border-bottom: 3px solid black;
     transition: 50ms;
-
 }
 
 .checkbtn {
@@ -116,7 +118,7 @@ a:hover {
     a.active,
     a:hover {
         background: none;
-        background-size:cover;
+        background-size: cover;
         color: #aa89d0;
     }
 }
@@ -136,17 +138,21 @@ a:hover {
 /* PAGE 1 CSS */
 #page1 {
     height: calc(100vh - 80px);
+    max-height: 1080px;
+    overflow: hidden;
     display: flex;
+    position: relative;
 }
 
-.page1-bg{
+.page1-bg {
     position: absolute;
     top: 0;
     height: 100vh;
+    max-height: calc(1080px + 80px);
     width: 80vw;
     background: url(/assets/doodle-pizza-seamless-pattern_650511-489.avif);
     z-index: -1;
-    opacity: .15;
+    opacity: .13;
 }
 
 .page-1-left {
@@ -159,18 +165,17 @@ a:hover {
 }
 
 .page-1-left h1 {
+    font-size: 9.3vw;
+    font-family: 'Overlock', cursive;
     font-weight: 500;
 }
 
 .page-1-left h4 {
     font-family: 'Outfit', sans-serif;
     font-weight: 400;
+    font-size: 1.5vw;
+    padding-left: .5em;
     margin-bottom: 1em;
-}
-
-.page-1-left h1 {
-    font-size: 7rem;
-    font-family: 'Overlock', cursive;
 }
 
 .page-1-right {
@@ -178,11 +183,10 @@ a:hover {
     height: 100%;
     display: flex;
     align-items: center;
-  
 }
 
 .page-1-pizza-big {
-    max-width: 650px;
+    width: 34vw;
     margin-right: -100%;
     z-index: 2;
 }
@@ -203,13 +207,19 @@ a:hover {
 }
 
 .page1-buttons button {
-    padding: 7px 14px;
+    padding: .7vw 1.4vw;
     margin: 0 10px;
     border: none;
     transition: all 150ms;
     cursor: pointer;
     background: #000;
     color: white;
+}
+
+.page1-buttons button a {
+    padding: .7vw 0;
+    font-size: 1.5vw;
+
 }
 
 .page1-buttons button:hover {
@@ -219,7 +229,7 @@ a:hover {
 }
 
 .page1-mushroom1 {
-    height: 70px;
+    height: 4.5vw;
     position: absolute;
     z-index: 2;
     right: 12%;
@@ -228,7 +238,7 @@ a:hover {
 }
 
 .page1-mushroom2 {
-    height: 70px;
+    height: 4.5vw;
     position: absolute;
     z-index: 2;
     right: 7%;
@@ -237,7 +247,7 @@ a:hover {
 }
 
 .page1-mushroom3 {
-    height: 70px;
+    height: 4.5vw;
     position: absolute;
     z-index: 2;
     right: 43%;
@@ -246,7 +256,7 @@ a:hover {
 }
 
 .page1-tomato1 {
-    height: 80px;
+    height: 5vw;
     position: absolute;
     z-index: 2;
     right: 32%;
@@ -254,15 +264,16 @@ a:hover {
 }
 
 .page1-tomato2 {
-    height: 79px;
+    height: 5vw;
     position: absolute;
     z-index: 2;
     transform: rotate(244deg);
     right: 27%;
     top: 11%;
 }
+
 .page1-tomato3 {
-    height: 79px;
+    height: 5vw;
     position: absolute;
     z-index: 2;
     transform: rotate(244deg);
@@ -271,7 +282,7 @@ a:hover {
 }
 
 .page1-pepper1 {
-    height: 157px;
+    height: 9vw;
     position: absolute;
     z-index: 2;
     transform: rotate(35deg);
@@ -280,7 +291,7 @@ a:hover {
 }
 
 .page1-pepper2 {
-    height: 157px;
+    height: 9vw;
     position: absolute;
     z-index: 2;
     transform: rotate(239deg);
@@ -289,7 +300,7 @@ a:hover {
 }
 
 .page1-pepperoni1 {
-    height: 87px;
+    height: 5.2vw;
     position: absolute;
     z-index: 2;
     right: 36%;
@@ -297,40 +308,182 @@ a:hover {
 }
 
 .page1-pepperoni2 {
-    height: 87px;
+    height: 5.2vw;
     position: absolute;
     z-index: 2;
     right: 1%;
     top: 11%;
 }
+
 .page1-pepperoni3 {
-    height: 87px;
+    height: 5.2vw;
     position: absolute;
     z-index: 2;
     right: 45%;
     top: 84%;
 }
+
 .page1-onionSlice1 {
-    height: 152px;
+    height: 9vw;
     position: absolute;
     z-index: 2;
     transform: rotate(152deg);
     right: 19%;
     top: 78%;
 }
+
 .page1-mint1 {
-    height: 98px;
+    height: 6vw;
     position: absolute;
     z-index: 2;
     transform: rotate(19deg);
     right: 2%;
     top: 46%;
 }
+
 .page1-mint2 {
-    height: 98px;
+    height: 6vw;
     position: absolute;
     z-index: 2;
     transform: rotate(250deg);
     right: 44%;
     top: 29%;
+}
+
+
+/* PAGE 2 CSS */
+
+#page2 {
+    position: relative;
+    padding-bottom: .3em;
+}
+
+.page-2-title h1 {
+    margin: 1em 0;
+    text-align: center;
+    font-size: 5vw;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.page-2-pizzaSlice1 {
+    position: absolute;
+    top: -5%;
+    right: 10%;
+    width: 17vw;
+    transform: rotate(80deg);
+    z-index: -1;
+}
+
+.page-2-pizzaSlice2 {
+    position: absolute;
+    top: -8%;
+    left: 11%;
+    width: 17vw;
+    transform: rotate(344deg);
+    z-index: -1;
+}
+
+.page-2-fries1 {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    width: 13vw;
+    transform: rotate(344deg);
+    z-index: -1;
+}
+
+.page-2-pizza1 {
+    position: absolute;
+    top: -5%;
+    left: 30%;
+    width: 15vw;
+    transform: rotate(344deg);
+    z-index: -1;
+}
+
+
+.menu-cards {
+    margin: 10rem auto 0 auto;
+    width: 90vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-card {
+    border: 2px solid rgb(0, 0, 0);
+    min-width: 18rem;
+    max-width: 20rem;
+    min-height: 22rem;
+    font-family: 'Outfit', sans-serif;
+    /* background: rgb(255, 243, 223); */
+    border-radius: 4px;
+    position: relative;
+    margin: .5em;
+
+}
+.menu-cont{
+    display: flex;
+    flex-direction: column;
+
+}
+.menu-item-img {
+    width: 17.8rem;
+    /* border-bottom:2px solid rgb(199, 199, 199); */
+}
+
+.menu-item-name {
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 300;
+    padding-top: .3em;
+}
+.menu-item-desc ul {
+    margin-top: .2em;
+}
+.menu-item-desc ul li {
+    list-style: none;
+    text-align: center;
+    color: #707070;
+}
+.menu-item-price{
+    text-align: center;
+    padding-top: .5em;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.menu-buy-btn {
+    width: 100%;
+    height: 2.5rem;
+    position: absolute;
+    bottom: 0;
+    border: none;
+    background: #000;
+    color: #fff;
+    font-size: 1.3em;
+    transition: all 150ms;
+    cursor: pointer;
+}
+
+.menu-buy-btn:hover {
+    background: orange;
+    color: white;
+}
+
+.menu-view-more{
+    display: block;
+    margin: 2.5em auto;
+    padding: .7vw 1.4vw;
+    border: none;
+    transition: all 300ms;
+    cursor: pointer;
+    background: orange;
+    color: white;
+    font-size: 1.5vw;
+    font-weight: 600;
+}
+.menu-view-more:hover{
+    transform: translateY(-3px);
 }
