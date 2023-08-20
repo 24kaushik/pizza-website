@@ -150,7 +150,7 @@ nav ul li a:hover {
     height: 100vh;
     max-height: calc(1080px + 80px);
     width: 80vw;
-    background: url(/assets/doodle-pizza-seamless-pattern_650511-489.avif);
+    background: url(/assets/PizzaPattern.png);
     z-index: -1;
     opacity: .13;
 }
