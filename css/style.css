@@ -150,7 +150,7 @@ nav ul li a:hover {
     height: 100vh;
     max-height: calc(1080px + 80px);
     width: 80vw;
-    background: url(/assets/PizzaPattern.png);
+    background: url(https://github.com/24kaushik/pizza-website/blob/main/assets/PizzaPattern.png?raw=true);
     z-index: -1;
     opacity: .13;
 }
