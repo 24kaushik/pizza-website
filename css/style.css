@@ -9,6 +9,10 @@
     text-decoration: none;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 a {
     color: unset;
     text-decoration: none;
@@ -58,8 +62,9 @@ nav ul li a {
 
 
 nav ul li a:hover {
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid orange;
     transition: 50ms;
+    color: orange;
 }
 
 .checkbtn {
@@ -95,15 +100,22 @@ nav ul li a:hover {
         display: block;
     }
 
-    ul {
+    nav ul {
         position: fixed;
         width: 100%;
         height: 100vh;
-        background: #342c50;
+        background: orange;
         top: 80px;
         left: -100%;
         text-align: center;
         transition: all .5s;
+        z-index: 999;
+    }
+
+    nav ul li a:hover {
+        border-bottom: 3px solid white;
+        transition: 50ms;
+        color: white;
     }
 
     nav ul li {
@@ -113,19 +125,22 @@ nav ul li a:hover {
 
     nav ul li a {
         font-size: 20px;
+        color: white;
     }
 
-    a.active,
-    a:hover {
+
+    a:hover,
+    a:active {
         background: none;
         background-size: cover;
-        color: #aa89d0;
+        color: #fff;
     }
 }
 
 #check:checked~ul {
     left: 0;
 }
+
 
 .logo {
     display: inline-block;
@@ -224,7 +239,6 @@ nav ul li a:hover {
 
 .page1-buttons button:hover {
     background: orange;
-    color: #000;
 
 }
 
@@ -233,7 +247,7 @@ nav ul li a:hover {
     position: absolute;
     z-index: 2;
     right: 12%;
-    top: 14%;
+    top: 8%;
     transform: rotate(32deg);
 }
 
@@ -242,7 +256,7 @@ nav ul li a:hover {
     position: absolute;
     z-index: 2;
     right: 7%;
-    top: 86%;
+    top: 80%;
     transform: rotate(287deg);
 }
 
@@ -251,7 +265,7 @@ nav ul li a:hover {
     position: absolute;
     z-index: 2;
     right: 43%;
-    top: 48%;
+    top: 42%;
     transform: rotate(287deg);
 }
 
@@ -260,7 +274,7 @@ nav ul li a:hover {
     position: absolute;
     z-index: 2;
     right: 32%;
-    top: 87%;
+    top: 81%;
 }
 
 .page1-tomato2 {
@@ -269,7 +283,7 @@ nav ul li a:hover {
     z-index: 2;
     transform: rotate(244deg);
     right: 27%;
-    top: 11%;
+    top: 5%;
 }
 
 .page1-tomato3 {
@@ -278,7 +292,7 @@ nav ul li a:hover {
     z-index: 2;
     transform: rotate(244deg);
     right: 6%;
-    top: 61%;
+    top: 55%;
 }
 
 .page1-pepper1 {
@@ -287,7 +301,7 @@ nav ul li a:hover {
     z-index: 2;
     transform: rotate(35deg);
     right: 3%;
-    top: 23%;
+    top: 17%;
 }
 
 .page1-pepper2 {
@@ -296,7 +310,7 @@ nav ul li a:hover {
     z-index: 2;
     transform: rotate(239deg);
     right: 42%;
-    top: 64%;
+    top: 58%;
 }
 
 .page1-pepperoni1 {
@@ -304,7 +318,7 @@ nav ul li a:hover {
     position: absolute;
     z-index: 2;
     right: 36%;
-    top: 19%;
+    top: 13%;
 }
 
 .page1-pepperoni2 {
@@ -312,7 +326,7 @@ nav ul li a:hover {
     position: absolute;
     z-index: 2;
     right: 1%;
-    top: 11%;
+    top: 5%;
 }
 
 .page1-pepperoni3 {
@@ -320,7 +334,7 @@ nav ul li a:hover {
     position: absolute;
     z-index: 2;
     right: 45%;
-    top: 84%;
+    top: 78%;
 }
 
 .page1-onionSlice1 {
@@ -338,7 +352,7 @@ nav ul li a:hover {
     z-index: 2;
     transform: rotate(19deg);
     right: 2%;
-    top: 46%;
+    top: 40%;
 }
 
 .page1-mint2 {
@@ -347,7 +361,7 @@ nav ul li a:hover {
     z-index: 2;
     transform: rotate(250deg);
     right: 44%;
-    top: 29%;
+    top: 23%;
 }
 
 
@@ -414,14 +428,21 @@ nav ul li a:hover {
 .menu-card {
     border: 2px solid rgb(0, 0, 0);
     min-width: 18rem;
-    max-width: 20rem;
-    min-height: 22rem;
     font-family: 'Outfit', sans-serif;
-    /* background: rgb(255, 243, 223); */
     border-radius: 4px;
     position: relative;
     margin: .5em;
+    padding-bottom: 2.7rem;
+    background-color: #fff;
+    transition: all 250ms;
+}
 
+.menu-card:hover {
+    border: 2px solid orange;
+
+    .menu-buy-btn {
+        background-color: orange;
+    }
 }
 
 .menu-cont {
@@ -432,7 +453,6 @@ nav ul li a:hover {
 
 .menu-item-img {
     width: 17.8rem;
-    /* border-bottom:2px solid rgb(199, 199, 199); */
 }
 
 .menu-item-name {
@@ -472,10 +492,6 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
-.menu-buy-btn:hover {
-    background: orange;
-    color: white;
-}
 
 .menu-view-more {
     display: block;
@@ -491,5 +507,183 @@ nav ul li a:hover {
 }
 
 .menu-view-more:hover {
+    transform: translateY(-5px);
+}
+
+/* WAVES PAGE 3 */
+
+.wave-page3 svg {
+    margin-top: -20px;
+}
+
+.wave-page3 {
+    margin-top: -7%;
+    width: 100vw;
+    z-index: -1;
+}
+
+
+/* PAGE 3 CSS */
+
+
+#page3 {
+    position: relative;
+    margin-top: -33%;
+    padding-bottom: .3em;
+    margin-bottom: 3em;
+}
+
+.page-3-title h1 {
+    padding: 1.86em 0;
+    text-align: center;
+    font-size: 5vw;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-bottom: 1em;
+}
+
+.offer-cards {
+    display: flex;
+    width: 90vw;
+    justify-content: space-evenly;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.offer-card {
+    width: 25rem;
+    min-height: 30rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    transition: all .25s;
+    cursor: pointer;
+    margin: 20px;
+}
+
+.offer-card:hover {
+    border: 2px solid orange;
+    scale: 101.5%;
+}
+
+
+/* PAGE 4 WAVE */
+
+.wave-page4 svg {
+    margin-top: -20px;
+}
+
+.wave-page4 {
+    margin-top: -7%;
+    width: 100vw;
+    z-index: -1;
+}
+
+/* PAGE 4 CSS START */
+#page4 {
+    position: relative;
+    margin-top: -35%;
+    padding-bottom: .3em;
+    margin-bottom: 3em;
+}
+
+.page-4-title h1 {
+    padding: 1.86em 0;
+    text-align: center;
+    font-size: 5vw;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-bottom: 1em;
+}
+
+#contact-form {
+    width: 90vw;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#contact-form-name {
+    display: flex;
+    margin: auto;
+    font-size: 120%;
+    border-radius: 5px;
+    width: 80%;
+}
+
+#contact-form-name div {
+    background: orange;
+    height: 1.7em;
+    padding: 0 .5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 8%;
+    min-width: fit-content;
+
+}
+
+#contact-name,
+#contact-name:focus {
+    border: 2px solid orange;
+    outline: none;
+    padding-left: .2em;
+    font-size: .9em;
+    width: 92%;
+}
+
+
+#contact-form-email {
+    display: flex;
+    margin: .5em auto;
+    font-size: 120%;
+    border-radius: 5px;
+    width: 80%;
+}
+
+#contact-form-email div {
+    background: orange;
+    height: 1.7em;
+    padding: 0 .5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    min-width: fit-content;
+    width: 8%;
+}
+
+#contact-email,
+#contact-email:focus {
+    border: 2px solid orange;
+    outline: none;
+    padding-left: .2em;
+    font-size: .9em;
+    width: 92%;
+}
+
+#contact-query {
+    width: calc(80% - 3px);
+    border: none;
+    outline: 1px solid orange;
+    padding: .3em;
+    height: 20em;
+    font-size: 1.3em;
+}
+
+#contact-form-submit {
+    background: orange;
+    padding: .3em .8em;
+    font-size: 1.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    min-width: fit-content;
+    border: none;
+    margin: 1em;
+    transition: all .25s;
+    cursor: pointer;
+}
+#contact-form-submit:hover{
     transform: translateY(-3px);
 }
