@@ -736,16 +736,19 @@ footer {
     height: 100%;
     padding: 0 10%;
 }
-.footer-main-right-title h1{
+
+.footer-main-right-title h1 {
     text-align: center;
     font-size: 5vw;
     color: #fff;
 }
-.footer-links{
+
+.footer-links {
     display: flex;
     justify-content: space-between;
 }
-.footer-links ul li{
+
+.footer-links ul li {
     color: #fff;
     list-style: none;
     font-size: 3vw;
@@ -753,9 +756,11 @@ footer {
     cursor: pointer;
     border-bottom: 3px solid orange;
 }
-.footer-links ul li:hover{
+
+.footer-links ul li:hover {
     border-bottom: 3px solid white;
 }
+
 .footer-bottom {
     height: 20%;
     display: flex;
