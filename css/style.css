@@ -381,7 +381,7 @@ nav ul li a:hover {
 
 .page-2-pizzaSlice1 {
     position: absolute;
-    top: -5%;
+    top: 0%;
     right: 10%;
     width: 17vw;
     transform: rotate(80deg);
@@ -390,7 +390,7 @@ nav ul li a:hover {
 
 .page-2-pizzaSlice2 {
     position: absolute;
-    top: -8%;
+    top: 0%;
     left: 11%;
     width: 17vw;
     transform: rotate(344deg);
@@ -408,7 +408,7 @@ nav ul li a:hover {
 
 .page-2-pizza1 {
     position: absolute;
-    top: -5%;
+    top: 0%;
     left: 30%;
     width: 15vw;
     transform: rotate(344deg);
@@ -550,13 +550,18 @@ nav ul li a:hover {
 }
 
 .offer-card {
-    width: 25rem;
-    min-height: 30rem;
+    width: 30rem;
+    max-height: 42rem;
     border: 2px solid black;
     border-radius: 5px;
     transition: all .25s;
     cursor: pointer;
     margin: 20px;
+}
+
+.offer-card img {
+    width: 100%;
+    height: 100%;
 }
 
 .offer-card:hover {
@@ -580,7 +585,7 @@ nav ul li a:hover {
 /* PAGE 4 CSS START */
 #page4 {
     position: relative;
-    margin-top: -35%;
+    margin-top: -35.5%;
     padding-bottom: .3em;
     margin-bottom: 3em;
 }
@@ -668,6 +673,9 @@ nav ul li a:hover {
     padding: .3em;
     height: 20em;
     font-size: 1.3em;
+    resize: vertical;
+    min-height: 13rem;
+    max-height: 70vh;
 }
 
 #contact-form-submit {
@@ -684,6 +692,77 @@ nav ul li a:hover {
     transition: all .25s;
     cursor: pointer;
 }
-#contact-form-submit:hover{
+
+#contact-form-submit:hover {
     transform: translateY(-3px);
+}
+
+/* WAVE FOOTER CSS */
+
+.wave-footer {
+    margin-top: -5%;
+}
+
+/* FOOTER CSS START */
+
+footer {
+    background: orange;
+    /* height: ; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: -20px;
+}
+
+.footer-main {
+    height: 80%;
+    display: flex;
+}
+
+.footer-main-left {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-main-left img {
+    width: 40%;
+    mix-blend-mode: multiply;
+}
+
+.footer-main-right {
+    width: 50%;
+    height: 100%;
+    padding: 0 10%;
+}
+.footer-main-right-title h1{
+    text-align: center;
+    font-size: 5vw;
+    color: #fff;
+}
+.footer-links{
+    display: flex;
+    justify-content: space-between;
+}
+.footer-links ul li{
+    color: #fff;
+    list-style: none;
+    font-size: 3vw;
+    transition: all .2s;
+    cursor: pointer;
+    border-bottom: 3px solid orange;
+}
+.footer-links ul li:hover{
+    border-bottom: 3px solid white;
+}
+.footer-bottom {
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 3vw;
+    color: white;
+    padding: 1.5em 0;
 }
